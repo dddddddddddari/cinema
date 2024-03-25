@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS sessions (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR UNIQUE
+);
+
+INSERT INTO sessions(name) VALUES ('Матрица') ON CONFLICT DO NOTHING;
+
+INSERT INTO sessions(name) VALUES ('Титаник') ON CONFLICT DO NOTHING;
+
+INSERT INTO sessions(name) VALUES ('Форсаж') ON CONFLICT DO NOTHING;
