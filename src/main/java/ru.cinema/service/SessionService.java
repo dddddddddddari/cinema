@@ -23,28 +23,14 @@ public class SessionService {
         this.ticketService = ticketService;
     }
 
-    /**
-     * Метод возвращает все сеансы.
-     * @return List<Session> список сеансов.
-     */
     public List<Session> findAll() {
         return new ArrayList<>(store.findAll());
     }
 
-    /**
-     * Метод возвращает сеанс по идентификационному номеру.
-     * @param id идентификационный номер сеанса.
-     * @return Session сеанс.
-     */
     public Session findById(int id) {
         return store.findById(id);
     }
 
-    /**
-     * Метод возвращает список свободных мест в зале.
-     * @param id идентификационный номер зала.
-     * @return List<Seat> список свободных мест в зале.
-     */
     public List<Seat> findFreeSeats(int id) {
         List<Ticket> tickets = ticketService.findAll();
         List<Seat> seats = hallService.findById(id);

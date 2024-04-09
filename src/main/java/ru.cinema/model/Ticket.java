@@ -2,11 +2,6 @@ package ru.cinema.model;
 
 import java.util.Objects;
 
-/**
- * Класс описывающий билет на сеанс в кинотеатре.
- * @author Aleksandr Kuznetsov.
- * @version 1.0
- */
 public class Ticket {
 
     private int id;

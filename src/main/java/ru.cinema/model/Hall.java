@@ -3,11 +3,7 @@ package ru.cinema.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Класс описывающий зал в кинотеатре.
- * @author Aleksandr Kuznetsov.
- * @version 1.0
- */
+
 public class Hall {
     private int id;
     private final int rows;

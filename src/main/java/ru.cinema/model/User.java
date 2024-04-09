@@ -2,11 +2,6 @@ package ru.cinema.model;
 
 import java.util.Objects;
 
-/**
- * Класс описывающий пользователя.
- * @author Aleksandr Kuznetsov.
- * @version 1.0
- */
 public class User {
 
     private int id;

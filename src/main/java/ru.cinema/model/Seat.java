@@ -1,10 +1,5 @@
 package ru.cinema.model;
 
-/**
- * Класс описывающий ряд и место в зале.
- * @author Aleksandr Kuznetsov.
- * @version 1.0
- */
 public class Seat {
     private int row;
     private int cell;

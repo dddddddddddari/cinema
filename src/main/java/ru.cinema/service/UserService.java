@@ -26,49 +26,23 @@ public class UserService {
         this.sessionService = sessionService;
     }
 
-    /**
-     * Метод добавляет пользователя.
-     * @param user пользователь.
-     * @return Добавленный пользователь.
-     */
+
     public Optional<User> add(User user) {
         return store.add(user);
     }
 
-    /**
-     * Метод обновляет данные пользователя.
-     * @param user пользователь.
-     */
     public void update(User user) {
         store.update(user);
     }
 
-    /**
-     * Метод ищет и возвращает пользователя по
-     * идентификационному номеру.
-     * @param id идентификационный номер.
-     * @return Пользователь.
-     */
     public User findById(int id) {
         return store.findById(id);
     }
 
-    /**
-     * Метод ищет и возвращает пользователя по
-     * почте и паролю.
-     * @param email почта.
-     * @param password пароль.
-     * @return Пользователь.
-     */
     public Optional<User> findUserByEmailAndPwd(String email, String password) {
         return store.findUserByNameAndPwd(email, password);
     }
 
-    /**
-     * Метод возвращает список билетов купленых пользователем.
-     * @param user Пользователь.
-     * @return Список купленных билетов.
-     */
     public List<Ticket> findUserTickets(User user) {
         List<Ticket> tickets = new ArrayList<>(ticketService.findByUser(user));
         tickets.forEach(
